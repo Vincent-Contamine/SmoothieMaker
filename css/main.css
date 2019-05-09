@@ -1,0 +1,64 @@
+                            
+                            /***index.php****/
+
+.index #logo img{
+	width: 10%;
+}
+.index{
+
+	 background: 
+         linear-gradient(
+      rgba(255, 0, 0, 0.45), 
+      rgba(255, 0, 0, 0.45)
+    ),
+    url('photos/food-fruit-grapes-197907.jpg');
+	height: 500px;
+
+}
+.index nav {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content:flex-end ;
+	align-items: flex-start;
+	margin: 0.5%;
+	margin-top: -5%;
+	}
+.index nav a{
+	padding: 1%;
+}	
+.index h1{
+	color: white;
+	margin: 5%;
+}
+.index #decouvrir{
+	background-color: #f26079;
+	margin: 5%;
+	border: 2px solid white;
+  border-radius: 20px 20px;
+}
+.index a{
+	color: white;
+	margin-bottom: -5%;
+}
+#milkshakefraise{
+    width: 15%;
+    margin:-25px auto 0 -25px;
+    position:absolute;
+    top:15%;
+    left:85%;
+}
+.col-md-6 img{
+	width: 90%;
+}
+ #smoothie{
+ 	width: 20%;
+ 	padding-top: 2%;
+ 	border: 2px  solid #62c97d ;
+	position: absolute;
+	top: 67%;
+	left: 2%;
+
+
+    
+}
