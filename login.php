@@ -62,14 +62,29 @@ if (array_key_exists("email",$_POST) && array_key_exists("password",$_POST))//on
                 ");// on récupère les infos du nouveau compte avec le dernier Id insérer pour créer une nouvelle session
             $requete->execute([$lastId]);
             $user = $requete->fetch();
-            $userSession = new UserSession();
-            $userSession->create(
-                $user['Id'],$user['FirstName'],$user['LastName'],$user['Email']
-            ); // on crée la session et on redirige vers l'accueil
-            header('Location: index.php');
-		    exit();  
-
+            if (empty($user))// si la requete retourne un erreur , on retourne une erreur a l'utilisateur
+            {
+                $erreur = "Erreur lors de la création du compte";
+                header('Location: inscription.php?err='.$erreur); 
+		        exit();
+            }
+            else //sinon on continue car le compte est bien crée
+            {
+                $userSession = new UserSession();
+                $userSession->create(
+                    $user['Id'],$user['FirstName'],$user['LastName'],$user['Email']
+                ); // on crée la session et on redirige vers l'accueil
+                header('Location: index.php');
+                exit();  
+            }
         }
+        else 
+        {
+            $erreur = "Le copmpte n'existe pas";
+            header('Location: connexion.php?err='.$erreur); 
+		    exit();
+        }
+
     }
     else // si le compte existe, on vérifie le mdp
     {

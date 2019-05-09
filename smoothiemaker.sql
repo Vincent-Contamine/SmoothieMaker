@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Jeu 09 Mai 2019 à 15:05
+-- Généré le :  Jeu 09 Mai 2019 à 15:29
 -- Version du serveur :  5.7.26-0ubuntu0.16.04.1
 -- Version de PHP :  7.0.33-0ubuntu0.16.04.4
 
@@ -108,19 +108,12 @@ CREATE TABLE `RecetteLine` (
 --
 
 INSERT INTO `RecetteLine` (`Id_Recette`, `Id_Ingredient`, `Quantite`) VALUES
-(1, 9, '100gr d\''),
-(1, 10, '30gr de'),
-(1, 9, '100gr d\''),
-(1, 10, '30gr de'),
 (1, 1, '1'),
+(1, 9, '100gr d\''),
+(1, 10, '30gr de'),
 (1, 11, '5cl de'),
 (1, 12, '20cl'),
 (1, 13, '50gr de'),
-(2, 1, '1'),
-(2, 2, '30gr de'),
-(2, 10, '20gr de'),
-(2, 12, '20cl d\''),
-(2, 13, '50gr de'),
 (2, 1, '1'),
 (2, 2, '30gr de'),
 (2, 10, '20gr de'),
@@ -132,9 +125,13 @@ INSERT INTO `RecetteLine` (`Id_Recette`, `Id_Ingredient`, `Quantite`) VALUES
 (3, 12, '20cl d\''),
 (3, 13, '50gr de'),
 (4, 2, '50gr de'),
+(4, 7, '30gr de'),
 (4, 11, '20cl de'),
+(4, 12, '20cl d\''),
 (4, 13, '50gr de'),
-(4, 13, '50gr de'),
+(5, 4, '30gr de'),
+(5, 9, '50gr de'),
+(5, 11, '2cl de'),
 (5, 12, '20cl d\''),
 (5, 13, '50gr de'),
 (6, 2, '50gr de'),
@@ -142,8 +139,8 @@ INSERT INTO `RecetteLine` (`Id_Recette`, `Id_Ingredient`, `Quantite`) VALUES
 (6, 10, '25gr de'),
 (6, 12, '20cl d\''),
 (6, 13, '50gr de'),
-(7, 5, '50gr de'),
 (7, 4, '30gr de'),
+(7, 5, '50gr de'),
 (7, 10, '25gr de'),
 (7, 12, '20cl d\''),
 (7, 13, '50gr de'),
@@ -151,12 +148,7 @@ INSERT INTO `RecetteLine` (`Id_Recette`, `Id_Ingredient`, `Quantite`) VALUES
 (8, 8, '30gr de'),
 (8, 11, '2cl de'),
 (8, 12, '20cl d\''),
-(8, 13, '50gr de'),
-(5, 9, '50gr de'),
-(5, 4, '30gr de'),
-(5, 11, '2cl de'),
-(4, 12, '20cl d\''),
-(4, 7, '30gr de');
+(8, 13, '50gr de');
 
 -- --------------------------------------------------------
 
@@ -200,6 +192,7 @@ ALTER TABLE `Recette`
 -- Index pour la table `RecetteLine`
 --
 ALTER TABLE `RecetteLine`
+  ADD PRIMARY KEY (`Id_Recette`,`Id_Ingredient`),
   ADD KEY `Id_Recette` (`Id_Recette`),
   ADD KEY `Id_Ingredient` (`Id_Ingredient`);
 
