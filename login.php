@@ -80,7 +80,7 @@ if (array_key_exists("email",$_POST) && array_key_exists("password",$_POST))//on
         }
         else 
         {
-            $erreur = "Le copmpte n'existe pas";
+            $erreur = "Le compte n'existe pas";
             header('Location: connexion.php?err='.$erreur); 
 		    exit();
         }
