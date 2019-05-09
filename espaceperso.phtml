@@ -1,4 +1,5 @@
-
+<?php $userSession = new UserSession(); ?> 
+<?php if($userSession->isAuthenticated() == true): ?>
     <div class="container">
         <div class="col-md-12">
 	        <img src="#">
@@ -11,3 +12,7 @@
 	    	<a href="#">Orange gourmandise</a>
 	    </div>
 	</div>
+	<?php else : ?>
+	<?php header('Location: connexion.php');
+exit(); ?>
+	<?php endif; ?>

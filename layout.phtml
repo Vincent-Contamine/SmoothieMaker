@@ -8,9 +8,12 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Nixie+One" rel="stylesheet"> 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" >
+<<<<<<< HEAD
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" </script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+=======
+
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" /> 
 </head>
 <body>
@@ -20,10 +23,16 @@
         </div>
         <nav>
             <a href="index.php">Acceuil</a>    
-            <a href="listessmoothies.php">Smoothies</a>   
-            <a href="listesrecettes.php">Recette</a>   
+            <a href="listesmoothies.php">Smoothies</a>   
+            <a href="listerecettes.php">Recette</a>   
             <a href="lebar.php">Le bar</a>
-       
+            <?php $userSession = new UserSession(); ?> 
+            <?php if($userSession->isAuthenticated() == true): ?>
+                <p class="welcome">Bonjour <strong><?= htmlspecialchars($userSession->getFullName()) ?></strong> !</p>
+                <a href="logout.php">Déconnexion</a>
+            <?php else : ?>
+                <a href="connexion.php">Se connecter</a>
+            <?php endif; ?>       
         </nav>
     </header>
         <?php include $template.".phtml"; ?>
