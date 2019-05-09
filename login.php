@@ -47,7 +47,7 @@ if (array_key_exists("email",$_POST) && array_key_exists("password",$_POST))//on
             `Password`,FirstName, LastName)
             VALUES(?,?,?,?)
                 ");//créer un nouveau compte
-            $requete->execute([$_POST['email'],$hashPassword,$_POST['FirstName'],$_POST['LastName']]);
+            $requete->execute([$_POST['email'],$hashPassword,ucfirst(strtolower($_POST['FirstName'])),ucfirst(strtolower($_POST['LastName']))]);
             $lastId = $pdo->lastInsertId();
             $requete = $pdo->prepare("
             SELECT
