@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Jeu 09 Mai 2019 à 12:06
+-- Généré le :  Jeu 09 Mai 2019 à 13:31
 -- Version du serveur :  5.7.26-0ubuntu0.16.04.1
 -- Version de PHP :  7.0.33-0ubuntu0.16.04.4
 
@@ -53,7 +53,9 @@ CREATE TABLE `Recette` (
   `Id` int(11) NOT NULL,
   `Name` varchar(50) NOT NULL,
   `Description` varchar(400) NOT NULL,
-  `Photo` varchar(30) NOT NULL
+  `Photo` varchar(30) NOT NULL,
+  `Confidentielle` varchar(10) NOT NULL,
+  `Mois` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -64,7 +66,8 @@ CREATE TABLE `Recette` (
 
 CREATE TABLE `RecetteLine` (
   `Id_Recette` int(11) NOT NULL,
-  `Id_Ingredient` int(11) NOT NULL
+  `Id_Ingredient` int(11) NOT NULL,
+  `Quantite` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -76,7 +79,7 @@ CREATE TABLE `RecetteLine` (
 CREATE TABLE `User` (
   `Id` int(11) NOT NULL,
   `Email` varchar(50) NOT NULL,
-  `Password` varchar(64) NOT NULL,
+  `Password` varchar(100) NOT NULL,
   `FirsName` varchar(50) NOT NULL,
   `LastName` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
