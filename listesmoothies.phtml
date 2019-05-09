@@ -11,8 +11,12 @@
             <a href="espaceperso.php"><img src="icons/emprycolorheart.png" alt="coeur"> VOS RECETTES FAVORITES</a>
         </div>
     </div>
+    <?php foreach ($smoothies as $smoothie): ?>
     <div class="col-md-4">
-        <img src="photos/" alt="img recette">
-        <p>Titre</p>
+        <a href="lebar.php">
+            <img src="photos/<?=$smoothie['Photo']?>" alt="img recette">
+            <p><?=$smoothie['Name']?></p>
+        </a>
     </div>
+    <?php endforeach ?>
 </div>
