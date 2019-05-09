@@ -1,7 +1,7 @@
 <?php
 include "bdd_connection.php";
 
-$template ="accueil";
+$template ="index";
 
 include "layout.phtml";
 
