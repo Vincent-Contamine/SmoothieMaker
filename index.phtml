@@ -22,7 +22,15 @@
             <a href="index.php">Acceuil</a>    
             <a href="listesmoothies.php">Smoothies</a>   
             <a href="listerecettes.php">Recette</a>   
-            <a href="lebar.php">Le bar</a>           
+            <a href="lebar.php">Le bar</a>
+            <?php $userSession = new UserSession(); ?> 
+            <?php if($userSession->isAuthenticated() == true): ?>
+                <p class="welcome">Bonjour <strong><?= htmlspecialchars($userSession->getFullName()) ?></strong> !</p>
+                <a href="logout.php">Déconnexion</a>
+            <?php else : ?>
+                <a href="connexion.php">Se connecter</a>
+            <?php endif; ?>
+                    
         </nav>
         <h1>FABRICATION DE <br>SMOOTHIE ARTISANAL</h1>
 <a href="" id="decouvrir">DECOUVRIR</a>
