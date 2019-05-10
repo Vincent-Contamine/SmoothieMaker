@@ -1,0 +1,11 @@
+.titre{
+    
+    font-weight: bold;
+    font-size: 3rem;
+    border: 2px #f26079 solid;
+    padding: 5rem;
+}
+.divimg{
+    background-image: url('../photos/smooth.jpg');
+    background-size: 100%;
+}   
