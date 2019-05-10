@@ -123,7 +123,7 @@ footer img{
 .affiche{
 	padding-bottom:3%;
 }
-@media screen and (max-width: 1024px) and (min-width: 768px){
+@media screen and (max-width: 1024px) and (min-width: 769px){
 	iframe{
 		width: 100%;
 	}
@@ -202,5 +202,18 @@ footer img{
 	bottom:2%;
 	left: 1%;
 	z-index: 1;
+}
+.index nav {
+	display: flex;
+ flex-direction: column;
+ text-align:center;
+ line-height:4em;
+}
+.index nav a{
+ display: block !important;
+}
+#logo
+{
+	text-align: left;
 }
 }
