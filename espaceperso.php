@@ -18,7 +18,7 @@ if ($userSession->isAuthenticated() == true) // on vérifie que l'utilisateur es
     INNER JOIN
     RecetteLine rl ON r.Id = rl.Id_Recette
     WHERE
-    Id_User = 1 
+    Id_User = ? 
     GROUP BY
     rl.Id_Recette
         "); // on récupère les recettes favorites de l'utilisateur

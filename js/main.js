@@ -52,6 +52,11 @@ function unfav(e){
         }
     });
 }
+function afficherDetails(e){
+    e.preventDefault();
+    var idRecette = e.currentTarget.id;
+    window.location.href = "onerecette.php?id="+idRecette;
+}
 
 $(document).ready(function(){
     if (window.location.href.match('connexion.php') != null)
@@ -65,6 +70,10 @@ $(document).ready(function(){
     if (window.location.href.match('espaceperso.php') != null)
     {
         $('body').on('click', '.fav', unfav);
+    }
+    if (window.location.href.match('listerecettes.php') != null)
+    {
+        $('body').on('click', '.recette', afficherDetails);
     }
 
 });

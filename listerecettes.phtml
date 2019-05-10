@@ -11,10 +11,20 @@
             <a href="espaceperso.php"><img src="icons/emprycolorheart.png" alt="coeur"> VOS RECETTES FAVORITES</a>
         </div>
     </div>
-    <div class="col-md-4">
-        <img src="icons/fruitscolor.png" alt="fruits">
-        <img src="icons/emprycolorheart.png" alt="coeur">
-        <img src="photos/" alt="img recette">
-        <p>Titre</p>
-    </div>
+        <?php foreach ($smoothies as $smoothie): ?>
+
+		    <div class="col-md-4">
+		    	<img src="photos/<?= $smoothie['Photo']; ?>">
+		    	<p><?= $smoothie['nbIngredient']; ?><img src="icons/fruitscolor.png" alt="fruits"></p> 
+		    	<a href="" class="fav" id="<?= $smoothie['Id']; ?>">
+                <?php if ($smoothie['fav'] == 'true'):?>
+                <img src="icons/fullheart.png" alt="coeur"></a>
+                <?php else : ?>
+                <img src="icons/emprycolorheart.png" alt="coeur"></a>
+                <?php endif; ?>
+                
+		    	<a href="#" id='<?= $smoothie['Id'] ?>' class="recette"><?= $smoothie['Name']; ?></a>
+		    </div>
+		<?php endforeach; ?>
+  
 </div>
