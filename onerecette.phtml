@@ -1,7 +1,7 @@
 
 	<div>
-		<img src="photos/smoothie-detox.jpg">  
-		<h1>GREEN OXYDANT</h1> 
+		<img src="photos/<?= $recette['Photo']?>">  
+		<h1><?= $recette['Name']?></h1> 
 	</div>
 	<div>
 		<a href="#"><img src="icons/emprycolorheart.png"> AJOUTER CETTE RECETTE EN FAVORIS</a>
@@ -11,12 +11,9 @@
 			<h3>INGREDIENTS</h3>
 			<p>Pour 2 personnes:</p>
 			<ul>
-				<li>100gr d'épinards</li>
-				<li>30gr de raisin sans pépin</li>
-				<li>1 pomme</li>
-				<li>5cl de jus de citron</li>
-				<li>20cl d'eau</li>
-				<li>50gr de glaçons</li>
+			  <?php for ($i=0; $i<count($recetteLine); $i++ ): ?>
+				<li><?= $recetteLine[$i]['Quantite'] ?> <?= $listeingredient[$recetteLine[$i]['Id_Ingredient']]['Name']?></li>
+				<?php endfor; ?>
 			</ul>
 		</div>
 		<div class="col-md-6">
