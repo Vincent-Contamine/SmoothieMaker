@@ -41,7 +41,6 @@ if($userSession->isAuthenticated() == true)
         }
     }
 }
-var_dump($smoothies);
 
 
 

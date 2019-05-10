@@ -35,6 +35,7 @@ function unfav(e){
     e.preventDefault();
     $('.alert').hide();
     var idRecette = e.currentTarget.id;
+    var location = window.location;
     $.ajax({
         url: 'removefavorite.php',
         type : "POST",
@@ -43,7 +44,7 @@ function unfav(e){
         success: function(data){
             if (data.result == true) 
             {
-                window.location.href = "espaceperso.php";
+                window.location.href = location;
             }
             else
             {
@@ -52,11 +53,45 @@ function unfav(e){
         }
     });
 }
+
+function addfav(e){
+    e.preventDefault();
+    $('.alert').hide();
+    var idRecette = e.currentTarget.id;
+    var image = e.target.alt;
+    if(image == 'coeur vide'){
+
+    var location = window.location;
+    $.ajax({
+        url: 'addfavorite.php',
+        type : "POST",
+        data: {idRecette: idRecette},
+        dataType: 'json', 
+        success: function(data){
+            if (data.result == true) 
+            {
+                window.location.href = location;
+            }
+            else
+            {
+                $('<div class="alert alert-danger" role="alert">Une erreur est survenue</div>').insertAfter("h1");
+            }
+        }
+    });
+    }
+    else if(image == 'coeur plein')
+    {
+        unfav(e);
+    }
+}
+
 function afficherDetails(e){
     e.preventDefault();
     var idRecette = e.currentTarget.id;
     window.location.href = "onerecette.php?id="+idRecette;
 }
+
+
 
 $(document).ready(function(){
     if (window.location.href.match('connexion.php') != null)
@@ -71,10 +106,15 @@ $(document).ready(function(){
     {
         $('body').on('click', '.fav', unfav);
     }
+    if (window.location.href.match('listerecettes.php') != null || window.location.href.match('onerecette.php') != null)
+    {
+        $('body').on('click', '.fav', addfav);
+    }
     if (window.location.href.match('listerecettes.php') != null)
     {
         $('body').on('click', '.recette', afficherDetails);
     }
+
 
 });
 
