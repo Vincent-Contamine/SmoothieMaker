@@ -217,3 +217,28 @@ footer img{
 	text-align: left;
 }
 }
+ /*********************** ONE RECETTE ***********************/
+
+ .one-recette h1{
+	text-align: center;
+	width: 30%;
+	 padding:2%;
+	 border: 2px  solid #f26079 ;
+	position: relative;
+	bottom:20%;
+	left: 30%;
+	z-index: 1;
+ }
+ .coeur{
+	 width: 1%;
+	 color: white;
+ }
+ .milieu{
+	 text-align: center;
+	 background-color: #f26079;
+	 margin: 5%;
+	 padding: 1%;
+	 border: 2px solid;
+	 border-radius: 20px 20px;
+	 color: white;
+ }

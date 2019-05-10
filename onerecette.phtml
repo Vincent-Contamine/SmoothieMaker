@@ -1,10 +1,16 @@
 
-	<div>
-		<img src="photos/<?= $recette['Photo']?>">  
-		<h1><?= $recette['Name']?></h1> 
+	<div class="container one-recette">
+		<div class="row">
+		<div class="col-md-12">
+		<img src="photos/<?= $recette['Photo']?>"> 
+		</div> 
+		<div class="col-md-12">
+		<h1><?= $recette['Name']?></h1>
+		</div> 
+		</div>
 	</div>
 	<div>
-		<a href="#"><img src="icons/emprycolorheart.png"> AJOUTER CETTE RECETTE EN FAVORIS</a>
+		<a href="#" class="fav milieu"><img src="icons/emprycolorheart.png" class="coeur"> AJOUTER CETTE RECETTE EN FAVORIS</a>
 	</div>
 	<div class="container">
 		<div class="col-md-6">
