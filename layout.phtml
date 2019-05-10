@@ -6,6 +6,7 @@
     <title>SmoothieMaker</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700,800,900" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Nixie+One" rel="stylesheet"> 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" >
 
@@ -19,31 +20,36 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/main3.css" />  
 </head>
 <body>
-    <header class="header">
-        <div class="logo">
-            <img src="logo/logo.png" alt="logo">
+    <header class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 tailleimage">
+                <img src="logo/logo.png" alt="logo">
+            </div>
+            <nav class="col-md-9 alignementnav">
+                <a href="index.php">ACCUEIL</a>    
+                <a href="listesmoothies.php">SMOOTHIES</a>   
+                <a href="listerecettes.php">RECETTES</a>   
+                <a href="lebar.php">LE BAR</a>
+                <?php $userSession = new UserSession(); ?> 
+                <?php if($userSession->isAuthenticated() == true): ?>
+                    <p class="welcome">Bonjour <strong><?= htmlspecialchars($userSession->getFullName()) ?></strong> !</p>
+                    <a href="logout.php">DECONNEXION</a>
+                <?php else : ?>
+                    <a href="connexion.php">SE CONNECTER</a>
+                <?php endif; ?>       
+            </nav>
         </div>
-        <nav class="nav">
-            <a href="index.php">Accueil</a>    
-            <a href="listesmoothies.php">Smoothies</a>   
-            <a href="listerecettes.php">Recette</a>   
-            <a href="lebar.php">Le bar</a>
-            <?php $userSession = new UserSession(); ?> 
-            <?php if($userSession->isAuthenticated() == true): ?>
-                <p class="welcome">Bonjour <strong><?= htmlspecialchars($userSession->getFullName()) ?></strong> !</p>
-                <a href="logout.php">Déconnexion</a>
-            <?php else : ?>
-                <a href="connexion.php">Se connecter</a>
-            <?php endif; ?>       
-        </nav>
     </header>
         <?php include $template.".phtml"; ?>
-        <footer>
+        <footer class="container-fluid rose">
             <h3>Partage ton smoothie sur les réseaux sociaux avec</h3>
             <h2>#smoothmaker</h2>
-            <div>
-                <img src="icons/instagram.png" alt="instagram logo">
-                <img src="icons/facebook.png" alt="facebook logo">
+            <div class="colone">
+                <div class="RSlogo">
+                    <img src="icons/instagram.png" alt="instagram logo">
+                    <img src="icons/facebook.png" alt="facebook logo">
+                </div>
+                
                 <small>2018 © Smooth Maker Lyon - Mentions légales - Contact</small>
             </div>          
         </footer>
