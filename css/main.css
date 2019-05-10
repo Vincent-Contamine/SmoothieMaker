@@ -10,7 +10,6 @@ h1, h2, h3{
 	width: 10%;
 }
 .index{
-
 	 background: 
          linear-gradient(
       rgba(255, 0, 0, 0.45), 
@@ -18,7 +17,6 @@ h1, h2, h3{
     ),
     url('photos/food-fruit-grapes-197907.jpg');
 	height: 500px;
-
 }
 .index nav {
 	display: flex;
@@ -112,6 +110,19 @@ footer img{
 	width: 2%;
 	color: white;
 }
+.affiche h3{
+	width: 100%;
+	text-align: center;
+ 	padding:3%;
+ 	border: 2px  solid #f26079 ;
+	position: relative;
+	bottom:5%;
+	right: 5%;
+	z-index: 1;
+}
+.affiche{
+	padding-bottom:3%;
+}
 @media screen and (max-width: 1024px) and (min-width: 768px){
 	iframe{
 		width: 100%;
@@ -136,4 +147,40 @@ footer img{
     .index nav a{
     	display: block !important;
     }
+}
+@media screen and (max-width: 768px){
+	iframe{
+		width:100%;
+	}
+	body{
+		padding:1%;
+		text-align:center;
+	}
+	#smoothie{
+ 	width: 70%;
+ 	padding-top: %;
+ 	border: 2px  solid #62c97d ;
+	position: absolute;
+	top: 62%;
+	left: 2%;
+    }
+    .affiche h3{
+	width: 100%;
+	text-align: center;
+ 	padding:3%;
+ 	border: 2px  solid #f26079 ;
+	position: relative;
+	bottom:5%;
+	left: 0.5%;
+	z-index: 1;
+}
+.Nous-trouver{
+	width: 100%;
+ 	padding:2%;
+ 	border: 2px  solid #62c97d ;
+	position: relative;
+	bottom:2%;
+	left: 1%;
+	z-index: 1;
+}
 }
