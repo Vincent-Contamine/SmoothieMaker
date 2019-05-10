@@ -1,0 +1,50 @@
+/*layout*/
+
+body {
+	font-family: 'Montserrat';
+}
+.tailleimage img{
+	width: 50%;
+}
+.alignementnav {
+	display: flex;
+	justify-content: end;
+	align-items: center;
+}
+.alignementnav a {
+	margin-left: 2%;
+	color: black;
+	text-decoration: none;
+	font-weight: 700;
+}
+.alignementnav p {
+	padding-top: 16px;
+	margin-left: 2%;
+}
+.rose {
+	background-color:  #F26079;
+}
+.rose h3, .rose h2 {
+	text-align: center;
+	color: #FFFFFF;
+} 
+.rose h3 {
+	font-weight: 700;
+	padding-top: 5%;
+}
+.rose h2 {
+	padding-top: 1%;
+	font-weight: 800;
+}
+.colone img {
+	width:  5%;
+}
+.colone small {
+	padding: 5% 0;
+}
+.colone {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	color: #ffffff;
+}
