@@ -1,18 +1,29 @@
-<?php $userSession = new UserSession(); ?> 
-<?php if($userSession->isAuthenticated() == true): ?>
+
+<?php if($userSession->isAuthenticated() == true): ?> <!-- si l'utilisateur est connecter on affiche ces recttes favoritent -->
     <div class="container">
         <div class="col-md-12">
 	        <img src="#">
 			<h1>MES RECETTES</h1>
 		</div>
 	</div>
-	<div class="container">
-	    <div class="col-md-4">
-	        <img src="#">
-	    	<a href="#">Orange gourmandise</a>
-	    </div>
-	</div>
-	<?php else : ?>
+		<?php if(empty($fav)): ?> <!-- si on n'a pas de recette on affiche cela -->
+			<p>Vous n'avez encore aucune recette dans vos favoris</p>
+		<?php else : ?> <!-- sinon on affiche les recettes -->
+			
+			<div class="container">
+			<div class="row">
+				<?php for($i = 0; $i < count($fav); $i++) : ?>
+				<div class="col-md-4">
+					<img src="photos/<?= $fav[$i]['Photo']; ?>">
+					<p><?= $fav[$i]['nbIngredient']; ?><img src="icons/fruitscolor.png" alt="fruits"></p> 
+					<a href="" class="fav" id="<?= $fav[$i]['Id_Recette']; ?>"><img src="icons/fullheart.png" alt="coeur"></a>
+					<a href="#"><?= $fav[$i]['Name']; ?></a>
+				</div>
+				<?php endfor; ?>
+				</div>
+			</div>
+		<?php endif; ?>
+	<?php else : ?> <!-- sinon on le redirige vers la page de connection -->
 	<?php header('Location: connexion.php');
-exit(); ?>
+	exit(); ?>
 	<?php endif; ?>

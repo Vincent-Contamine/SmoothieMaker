@@ -25,8 +25,33 @@ function verifyI(e){
         e.preventDefault();
         $('<div class="alert alert-danger" role="alert">Veuillez saisir un email valide</div>').insertAfter("h1");
     }
+    if ($('#password').val() != $('#cpassword').val())
+    {
+        e.preventDefault();
+        $('<div class="alert alert-danger" role="alert">Les mots de passe ne correspondent pas</div>').insertAfter("h1");
+    }
 }
-
+function unfav(e){
+    e.preventDefault();
+    $('.alert').hide();
+    var idRecette = e.currentTarget.id;
+    $.ajax({
+        url: 'removefavorite.php',
+        type : "POST",
+        data: {idRecette: idRecette},
+        dataType: 'json', 
+        success: function(data){
+            if (data.result == true) 
+            {
+                window.location.href = "espaceperso.php";
+            }
+            else
+            {
+                $('<div class="alert alert-danger" role="alert">Une erreur est survenue</div>').insertAfter("h1");
+            }
+        }
+    });
+}
 
 $(document).ready(function(){
     if (window.location.href.match('connexion.php') != null)
@@ -37,5 +62,10 @@ $(document).ready(function(){
     {
         $('#connect').submit(verifyI);
     }
+    if (window.location.href.match('espaceperso.php') != null)
+    {
+        $('body').on('click', '.fav', unfav);
+    }
+
 });
 
