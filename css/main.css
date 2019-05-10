@@ -151,7 +151,7 @@ footer img{
 
 /* Layout */
 
-header {
+.header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -159,11 +159,11 @@ header {
 .logo img {
 	width: 100%;
 }
-nav a {
+.nav a {
 	margin-left: 2%;
 	display: block;
 }
-nav {
+.nav {
 	width: 80%;
 	display: flex;
 	justify-content: end;
