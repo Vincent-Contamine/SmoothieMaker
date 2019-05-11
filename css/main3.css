@@ -4,8 +4,58 @@
     font-size: 3rem;
     border: 2px #f26079 solid;
     padding: 5rem;
+    width: 120%;
+    margin: 50px 0 -50px -50px;
 }
 .divimg{
     background-image: url('../photos/smooth.jpg');
     background-size: 100%;
 }   
+.produits{
+    box-sizing: content-box;
+    padding: 0;
+}
+.produits img{
+    width: 100%;
+}
+.fruits,
+.fullheart,
+.emptyheart{
+    width: 10%!important;
+}
+#produit p{
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    position: relative;
+    top: -220px;
+    right: -10px;
+}
+.smoothiePics{
+    padding: 1rem;
+}
+#produit .fullheart,
+#produit .emptyheart{
+    position: relative;
+    top: -270px;
+    right: -295px;
+}
+.nomProduit{
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    font-weight: 700;
+    position: relative;
+    bottom: -40px;
+    
+}
+.nom{
+    width: 160px;
+    height: 80px;
+    border: #f26079 2px solid;
+    text-align: center;
+    margin: auto;
+    padding: 0 10px;
+    position: relative;
+    top: -120px;
+}
+

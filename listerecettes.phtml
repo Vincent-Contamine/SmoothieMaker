@@ -1,9 +1,9 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-6 divimg">
+        <div class="col-md-6 divimg ">
             
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 float-right">
             <h1 class="titre">NOS RECETTES</h1>
         </div>
     </div>
@@ -13,19 +13,24 @@
             <a href="espaceperso.php"><img src="icons/emprycolorheart.png" alt="coeur"> VOS RECETTES FAVORITES</a>
         </div>
     </div>
+        <div class="row">
             <?php foreach ($smoothies as $smoothie): ?>
 
-                <div class="col-md-4">
-                    <img src="photos/<?= $smoothie['Photo']; ?>" class>
-                    <p><?= $smoothie['nbIngredient']; ?><img src="icons/fruitscolor.png" alt="fruits"></p> 
-                    <a href="" class="fav" id="<?= $smoothie['Id']; ?>">
-                        <?php if (array_key_exists('fav', $smoothie) && ($smoothie['fav'] == 'true')):?>
-                        <img src="icons/fullheart.png" alt="coeur plein"></a>
-                        <?php else : ?>
-                        <img src="icons/emprycolorheart.png" alt="coeur vide"></a>
-                        <?php endif; ?>
-                    <a href="#" id='<?= $smoothie['Id'] ?>' class="recette"><?= $smoothie['Name']; ?></a>
+                <div class="col-md-4 produits">
+                    <div id="produit">
+                        <img src="photos/<?= $smoothie['Photo']; ?>" class="smoothiePics">
+                        <p><?= $smoothie['nbIngredient']; ?> <img src="icons/fruits.png" alt="fruits" class="fruits"></p>
+                        <a href="" class="fav" id="<?= $smoothie['Id']; ?>">
+                            <?php if (array_key_exists('fav', $smoothie) && ($smoothie['fav'] == 'true')):?>
+                            <img src="icons/fullheart.png" alt="coeur plein" class="fullheart"></a>
+                            <?php else : ?>
+                            <img src="icons/emptyheart.png" alt="coeur vide" class="emptyheart"></a>
+                            <?php endif; ?>
+                    </div>
+                    <div class="nom">
+                        <a href="#" id='<?= $smoothie['Id'] ?>' class="recette nomProduit"><?= $smoothie['Name']; ?></a>
+                    </div>
                 </div>
             <?php endforeach; ?>
-    
+        </div>
 </div>
