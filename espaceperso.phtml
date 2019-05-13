@@ -11,16 +11,20 @@
 		<?php else : ?> <!-- sinon on affiche les recettes -->
 			
 			<div class="container">
-			<div class="row">
+			<div class="row blocProduits">
 				<?php for($i = 0; $i < count($fav); $i++) : ?>
-				<div class="col-md-4">
-					<img src="photos/<?= $fav[$i]['Photo']; ?>">
-					<p><?= $fav[$i]['nbIngredient']; ?><img src="icons/fruitscolor.png" alt="fruits"></p> 
-					<a href="" class="fav" id="<?= $fav[$i]['Id_Recette']; ?>"><img src="icons/fullheart.png" alt="coeur"></a>
-					<a href="#"><?= $fav[$i]['Name']; ?></a>
+				<div class="col-md-4 produits">
+					<div id="produit">
+						<img src="photos/<?= $fav[$i]['Photo']; ?>" class="smoothiePics">
+						<p><?= $fav[$i]['nbIngredient']; ?><img src="icons/fruits.png" alt="fruits" class="fruits"></p> 
+						<a href="" class="fav" id="<?= $fav[$i]['Id_Recette']; ?>"><img src="icons/fullheart.png" alt="coeur"class="fullheart"></a>
+					</div>
+					<div class="nom">
+						<a href="#" class="nomProduit"><?= $fav[$i]['Name']; ?></a>
+					</div>
 				</div>
 				<?php endfor; ?>
-				</div>
+			</div>
 			</div>
 		<?php endif; ?>
 	<?php else : ?> <!-- sinon on le redirige vers la page de connection -->

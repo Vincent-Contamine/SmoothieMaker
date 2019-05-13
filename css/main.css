@@ -164,3 +164,42 @@ body {
 	padding: 2% 6%;
 	width: 34%;
 }
+/*One recette*/
+.titrerecette h1 {
+	font-weight: 800;
+	text-align: center;
+	border: 2px solid #F26079;
+	width: 60%;
+	padding: 5% 2% 2% 2%;
+	margin-top: -4%;
+}
+.titrerecette {
+	justify-content: center;
+	display: flex;
+}
+.pasdid img {
+	width: 2% !important;
+}
+.marginenhaut {
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+.contour {
+	border: 2px solid #62C97D;
+	font-weight: bold;
+	padding-top: 5%; 
+}
+.contour legend {
+	color: #62C97D;
+	text-align: center;
+	font-weight: 800;
+	width: 50%!important;
+	max-width: 50%!important;
+	margin: auto!important;
+}
+.tiret {
+	list-style-type: '- ';
+}
+.chifre {
+	padding-left: 2%;
+}
