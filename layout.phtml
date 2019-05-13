@@ -25,8 +25,13 @@
             <div class="tailleimage">
                 <img src="logo/logo.png" alt="logo">
             </div>
-            <!-- <nav class="alignementnav"> -->
+            <?php $userSession = new UserSession(); ?>
+            <?php if($userSession->isAuthenticated() == true): ?>   
+                <ul class="flexnav col-6">
+            <?php else : ?>
                 <ul class="flexnav col-4">
+            <?php endif; ?> 
+
                     <li><a href="index.php">ACCUEIL</a></li>
                     <li><a href="listesmoothies.php">SMOOTHIES</a> </li>
                     <li><a href="listerecettes.php">RECETTES</a> </li>
@@ -39,7 +44,6 @@
                     <li><a href="connexion.php">SE CONNECTER</a></li>          
                     <?php endif; ?> 
                 </ul>                                                                                  
-            <!-- </nav> -->
         </div>
     </header>
         <?php include $template.".phtml"; ?>

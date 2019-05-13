@@ -25,13 +25,18 @@
     <div class="row justify-content-between centralisation">
         <div class="tailleimage col-3">
             <img src="logo/logoblanc.png" alt="logo">
-        </div>     
-        <ul class="flexnavI col-4">
+        </div>  
+        <?php $userSession = new UserSession(); ?>
+        <?php if($userSession->isAuthenticated() == true): ?>   
+            <ul class="flexnavI col-6">
+        <?php else : ?>
+            <ul class="flexnavI col-4">
+        <?php endif; ?> 
             <li><a href="index.php">ACCUEIL</a></li>
             <li><a href="listesmoothies.php">SMOOTHIES</a> </li>
             <li><a href="listerecettes.php">RECETTES</a> </li>
             <li><a href="lebar.php">LE BAR</a></li>
-            <?php $userSession = new UserSession(); ?> 
+             
             <?php if($userSession->isAuthenticated() == true): ?>
             <li><p class="welcome">Bonjour <strong><?= htmlspecialchars($userSession->getFullName()) ?></strong> !</p></li>
             <li><a href="logout.php">DECONNEXION</a></li>                      
