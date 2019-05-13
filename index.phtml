@@ -6,56 +6,71 @@
     <title>SmoothieMaker</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Nixie+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700,800,900" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Nixie+One" rel="stylesheet"> 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" >
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" /> 
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/main2.css" /> 
-    <link rel="stylesheet" type="text/css" media="screen" href="css/main3.css" /> 
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main3.css" />  
 </head>
-<body>
-    <header class="index">
-        <div id="logo">
+<body class="titreh2">
+    <header class="container-fluid backR"> 
+    <div class="layer"> 
+    <div class="row justify-content-between centralisation">
+        <div class="tailleimage col-3">
             <img src="logo/logoblanc.png" alt="logo">
-        </div>
-        <nav>
-            <a href="index.php">Accueil</a>    
-            <a href="listesmoothies.php">Smoothies</a>   
-            <a href="listerecettes.php">Recette</a>   
-            <a href="lebar.php">Le bar</a>
+        </div>     
+        <ul class="flexnavI col-8">
+            <li><a href="index.php">ACCUEIL</a></li>
+            <li><a href="listesmoothies.php">SMOOTHIES</a> </li>
+            <li><a href="listerecettes.php">RECETTES</a> </li>
+            <li><a href="lebar.php">LE BAR</a></li>
             <?php $userSession = new UserSession(); ?> 
             <?php if($userSession->isAuthenticated() == true): ?>
-                <p class="welcome">Bonjour <strong><?= htmlspecialchars($userSession->getFullName()) ?></strong> !</p>
-                <a href="logout.php">Déconnexion</a>
+            <li><p class="welcome">Bonjour <strong><?= htmlspecialchars($userSession->getFullName()) ?></strong> !</p></li>
+            <li><a href="logout.php">DECONNEXION</a></li>                      
             <?php else : ?>
-                <a href="connexion.php">Se connecter</a>
-            <?php endif; ?>
-                    
-        </nav>
-        <h1>FABRICATION DE <br>SMOOTHIE ARTISANAL</h1>
-<a href="listesmoothies.php" id="decouvrir">DECOUVRIR</a>
+            <li><a href="connexion.php">SE CONNECTER</a></li>          
+            <?php endif; ?> 
+        </ul>     
+    </div>
+    <div class="row justify-content-around" >
+        <ul class="col-md-4 titreG d-flex flex-column justify-content-center">
+            <li><h1>FABRICATION DE <br>SMOOTHIE ARTISANAL</h1></li>
+            <li><a href="listesmoothies.php" id="decouvrir">DECOUVRIR</a></li>
+        </ul>
+        <div class="col-md-5 imgD">
+            <img src="photos/milkshakefraise.png" alt="milkshake" >
+        </div>
+    </div>  
+    </div>      
     </header>
- 
-    <div id="smoothie">     
-    <h2>SmoothMaker</h2>
-    <p>Votre producteur de smoothie artisanal à lyon</p>
-    </div> 
-    <img src="photos/milkshakefraise.png" alt="" id="milkshakefraise">
     <div class="container">
         <div class="row">
-        <div class="col-md-6 photo">
+            <div classe="col-md-3" id="smoothie">     
+            <h2>SmoothMaker</h2>
+            <p>Votre producteur de smoothie artisanal à lyon</p>
+            </div> 
+        </div>
+        <div class="row petitpadd">
+        <div class="col-md-6 photoG">
             <img src="photos/national-smoothie.png" alt="">
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 texteD">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis hic suscipit quae itaque vel dolores, deserunt maiores veritatis nam accusamus tempora magnam necessitatibus quod. Eligendi dolorem facilis quo pariatur animi.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores illum quia nemo sint modi iure, minus odio suscipit laborum vero ex non officia possimus, laboriosam autem velit cupiditate in ea.</p>
         </div>
         </div>
     </div>     
-<div class="container">
+<div class="container miseenavant">
     <h2 class="Nos-smoothies">Nos smoothies</h2>
+    <hr/>
     <div class="row">
     
     <?php foreach($recette as $index): ?>
@@ -89,12 +104,12 @@
         </div>
         </div>
     </div>
-    <h2>Decouvrez les DIY smoothies</h2>
-    <div class="row">
-    <div class="col-md-5">
+    <h2>Decouvrez les DIY smoothie</h2>
+    <div class="row marginbot">
+    <div class="col-md-5 photoG">
         <img src="photos/fondRose.jpg" alt="">
     </div>
-    <div class="col-md-7">
+    <div class="col-md-7 texteD">
             <h3>Nos smoothies, chez vous, pour vous.</h3>
             <p>Vous aimez nos smoothies ? Découvrez nos recettes uniques et originales à reproduire chez vous, directement.</p>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, exercitationem? Blanditiis ea, nesciunt mollitia quaerat ipsam dicta consequuntur at dolor maxime fugiat ratione magnam, quibusdam qui natus adipisci libero accusantium?</p>
@@ -102,12 +117,15 @@
     </div>
     </div>
 </div>
-        <footer>
+<footer class="container-fluid rose">
             <h3>Partage ton smoothie sur les réseaux sociaux avec</h3>
             <h2>#smoothmaker</h2>
-            <div>
-                <img src="icons/instagram.png" alt="instagram logo">
-                <img src="icons/facebook.png" alt="facebook logo"><br>
+            <div class="colone">
+                <div class="RSlogo">
+                    <img src="icons/instagram.png" alt="instagram logo">
+                    <img src="icons/facebook.png" alt="facebook logo">
+                </div>
+                
                 <small>2018 © Smooth Maker Lyon - Mentions légales - Contact</small>
             </div>          
         </footer>
