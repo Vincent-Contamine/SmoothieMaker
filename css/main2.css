@@ -1,0 +1,49 @@
+.cxn img{
+    width: 100%;
+  }
+.cxn{
+    text-align: center;
+}
+.cxn h1{
+    text-align: center;
+    margin: auto;
+	width: 60%;
+	padding:3%;
+	border: 2px  solid #f26079 ;
+	margin-top:-4% !important;
+    z-index:1;
+    font-weight: 900;
+}
+.cxn a {
+    background-color: #f26079;
+    color: white;
+	margin: 5%;
+	padding: 1%;
+	border: 2px solid;
+    border-radius: 20px 20px;
+}
+.a{
+    background-color: #f26079;
+    color: white;
+	margin: 5%;
+	padding: 1%;
+	border: 2px solid;
+    border-radius: 20px 20px;  
+}
+.cxn input{
+    width: 40%;
+    margin: auto;
+    margin-bottom: 2%!important;
+	padding: 1%;
+	border: 1px solid #f26079;
+    border-radius: 20px 20px; 
+}
+.form-sining{
+    width: 60%;
+    padding-top:2%;
+    margin-top:2%;
+    margin-bottom: 2%;
+    -webkit-box-shadow: -1px 10px 70px -10px rgba(189,189,189,1);
+    -moz-box-shadow: -1px 10px 70px -10px rgba(189,189,189,1);
+    box-shadow: -1px 10px 70px -10px rgba(189,189,189,1);
+}
