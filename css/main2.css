@@ -68,4 +68,73 @@
     margin-top:2% !important;
     margin-bottom:2% !important;
  }
+ .p{
+     padding: 10%;
  }
+ .rue{
+     padding: 10%;
+     margin: -20px  -60px 20px 90px ;
+ }
+ .trouver{
+    border: 2px #62c97d solid;
+    position: relative;
+    z-index:1;
+    margin: -20px  -60px 20px 90px ;
+ }
+ .horaires{
+    text-align:center;
+    border: 2px #62c97d solid;
+    position: relative;
+    padding:3%;
+    z-index:1;
+    margin: -30px  -60px 20px 400px ;
+    line-height:0.5
+ }
+  .bar h2{
+     font-weight: 800;
+ }
+ .horaires h2{
+    padding:5%;
+}
+#nous-ecrire{
+    text-align: center;
+    position: relative;
+    margin: auto;
+    padding-top:2%;
+    margin-top:5%;
+    margin-bottom: 5%;
+    -webkit-box-shadow: -1px 10px 70px -10px rgba(189,189,189,1);
+    -moz-box-shadow: -1px 10px 70px -10px rgba(189,189,189,1);
+    box-shadow: -1px 10px 70px -10px rgba(189,189,189,1);
+}
+#nous-ecrire h2{
+    text-align:left;
+    margin-left: 2%;
+}
+#nous-ecrire input{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 2%;
+	padding: 1%;
+	border: 1px solid #f26079;
+    border-radius: 20px 20px;
+}
+.msg{
+    width: 80%;
+    margin-bottom: 2%;
+	padding: 1%;
+	border: 1px solid #f26079;
+    border-radius: 20px 20px;
+}
+.sb{
+    width: 20% !important;
+    bottom:-50px;
+    left:40%;
+    margin-left:-10%;
+    position:absolute;
+    padding: 1%;
+    border: 1px solid #f26079;
+    background-color: #f26079;
+    border-radius: 20px 20px;
+    color:white;
+}

@@ -1,20 +1,37 @@
 
-    <div>
-		<img src="photos/3smooth.jpg">
-		<h2>LE BAR A SMOOTHIE</h2>
+    <div class="container bar">
+	<div class="row">
+        <div class="col-md-6 divimg ">
+            
+        </div>
+        <div class="col-md-6 float-right">
+            <h1 class="titre">LE BAR A SMOOTHIE</h1>
+        </div>
+    </div>
+		
+			<div class="p">
 		<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal </p>
-	</div>
-	<div>
+		</div>
+    
+	<div class="row">
+		<div class="col-md-6 ">
+			<div class="trouver">
 		<h2>Nous trouver</h2>
 		<p>Venez boire un coup smooth détente</p>
+</div>
+       <div class="rue">
 		<p>25, rue République 69002 Lyon</p>
 		<p>04 78 01 02 03</p>
 		<p>smooth@maker.fr</p>
+</div>
 	</div>
-	<div>
-		<map>
+	<div class=col-md-6>
+		<map class="mapy">
 			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26482.669920108907!2d4.812711693023134!3d45.758206825287495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ea56197f0eb3%3A0x6618930dd84dbfdc!2s25+Rue+de+la+R%C3%A9publique%2C+69002+Lyon!5e0!3m2!1sen!2sfr!4v1557390323161!5m2!1sen!2sfr" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 		</map>
+			</div>
+			</div>
+			<div class="col-md-4 horaires">
 		<h2>Nos horaires</h2>
 		<p>Lundi: 10h- 19h</p>
 		<p>Mardi: fermé</p>
@@ -28,12 +45,13 @@
 		<h2> Nous écrire</h2>
 		<form method="post" name="contact_form"
     action="lebar.php">
-    VOTRE NOM:
-    <input type="text" name="name">
-    VOTRE E-MAIL:
-    <input type="text" name="email">
-    VOTRE MESSAGE:
-    <textarea name="message"></textarea>
-    <input type="submit" value="Submit">
+    
+    <input type="text" name="name" placeholder="VOTRE NOM" requiered><br>
+    
+    <input type="text" name="email" placeholder="VOTRE E-MAIL" requiered><br>
+    
+    <textarea name="message" class="msg" placeholder="VOTRE MESSAGE" rows="8" requiered></textarea><br>
+    <input type="submit" value="Submit" class="sb">
 </form>
+	</div>
 	</div>
