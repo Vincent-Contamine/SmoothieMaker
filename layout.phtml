@@ -21,23 +21,25 @@
 </head>
 <body>
     <header class="container-fluid">
-        <div class="row">
-            <div class="col-md-3 tailleimage">
+        <div class="row justify-content-between">
+            <div class="tailleimage">
                 <img src="logo/logo.png" alt="logo">
             </div>
-            <nav class="col-md-9 alignementnav">
-                <a href="index.php">ACCUEIL</a>    
-                <a href="listesmoothies.php">SMOOTHIES</a>   
-                <a href="listerecettes.php">RECETTES</a>   
-                <a href="lebar.php">LE BAR</a>
-                <?php $userSession = new UserSession(); ?> 
-                <?php if($userSession->isAuthenticated() == true): ?>
-                    <p class="welcome">Bonjour <strong><?= htmlspecialchars($userSession->getFullName()) ?></strong> !</p>
-                    <a href="logout.php">DECONNEXION</a>
-                <?php else : ?>
-                    <a href="connexion.php">SE CONNECTER</a>
-                <?php endif; ?>       
-            </nav>
+            <!-- <nav class="alignementnav"> -->
+                <ul class="flexnav col-4">
+                    <li><a href="index.php">ACCUEIL</a></li>
+                    <li><a href="listesmoothies.php">SMOOTHIES</a> </li>
+                    <li><a href="listerecettes.php">RECETTES</a> </li>
+                    <li><a href="lebar.php">LE BAR</a></li>
+                    <?php $userSession = new UserSession(); ?> 
+                    <?php if($userSession->isAuthenticated() == true): ?>
+                    <li><p class="welcome">Bonjour <strong><?= htmlspecialchars($userSession->getFullName()) ?></strong> !</p></li>
+                    <li><a href="logout.php">DECONNEXION</a></li>                      
+                    <?php else : ?>
+                    <li><a href="connexion.php">SE CONNECTER</a></li>          
+                    <?php endif; ?> 
+                </ul>                                                                                  
+            <!-- </nav> -->
         </div>
     </header>
         <?php include $template.".phtml"; ?>

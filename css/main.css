@@ -4,7 +4,7 @@ body {
 	font-family: 'Montserrat';
 }
 .tailleimage img{
-	width: 50%;
+	width: 100px;
 }
 .alignementnav {
 	display: flex;
@@ -20,6 +20,15 @@ body {
 .alignementnav p {
 	padding-top: 16px;
 	margin-left: 2%;
+}
+.flexnav {
+	display: flex;
+	justify-content: end;
+	align-items: center;
+}
+.flexnav li {
+	display: inline-block;
+	margin-left: 2%; 
 }
 .rose {
 	background-color:  #F26079;
