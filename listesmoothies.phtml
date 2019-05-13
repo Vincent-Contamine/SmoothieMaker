@@ -1,22 +1,30 @@
-<div>
-    <img src="photos/smooth.jpg" alt="photo smoothie">
-    <div>
-        <h1>NOS SMOOTHIES</h1>
-    </div>
-</div>
 <div class="container">
     <div class="row">
-        <div>
-            <p>Des smoothies fait maison, avec des produits bio et de saison. Au plus possible nous favorisons les producteurs locaux afin de vous proposer des produits Eco-responsable au possible et bla bla bla.</p>
-            <a href="espaceperso.php"><img src="icons/emprycolorheart.png" alt="coeur"> VOS RECETTES FAVORITES</a>
+        <div class="col-md-6 divimg ">
+
+        </div>
+        <div class="col-md-6 float-right">
+                <h1 class="titre">NOS SMOOTHIES</h1>
         </div>
     </div>
-    <?php foreach ($smoothies as $smoothie): ?>
-    <div class="col-md-4">
-        <a href="lebar.php">
-            <img src="photos/<?=$smoothie['Photo']?>" alt="img recette">
-            <p><?=$smoothie['Name']?></p>
-        </a>
+    <div class="row">
+        <div class="intro">
+            <p>Des smoothies fait maison, avec des produits bio et de saison. Au plus possible nous favorisons les producteurs locaux afin de vous proposer des produits Eco-responsable au possible et bla bla bla.</p>
+            <a href="espaceperso.php"><img src="icons/emptyheart.png" alt="coeur"> VOS RECETTES FAVORITES</a>
+        </div>
     </div>
-    <?php endforeach ?>
+    <div class="row blocProduits">
+        <?php foreach ($smoothies as $smoothie): ?>
+            <div class="col-md-4 produits">
+                <div id="produit">
+                    <a href="lebar.php">
+                        <img src="photos/<?=$smoothie['Photo']?>" alt="img recette" class="smoothiePics">
+                        <div class="nom2">
+                            <p class="nomProduit2"><?=$smoothie['Name']?></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        <?php endforeach ?>
+    </div>
 </div>
