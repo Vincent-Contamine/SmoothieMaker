@@ -70,17 +70,17 @@
     font-size: 1rem;
     font-weight: 700;
     position: relative;
-    bottom: -20px;
+    bottom: -25px;
 }
 .nom{
     width: 160px;
     height: 80px;
     border: #f26079 2px solid;
     text-align: center;
-    margin: auto;
+    margin: -8rem auto 2rem auto;
     padding: 0 10px;
     position: relative;
-    top: -120px;
+    z-index: 1;
 }
 /* PAGE SMOOTHIE */
 
