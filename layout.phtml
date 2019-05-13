@@ -26,7 +26,13 @@
                 <img src="logo/logo.png" alt="logo">
             </div>
             <!-- <nav class="alignementnav"> -->
-                <ul class="flexnav col-4">
+            <?php $userSession = new UserSession(); ?>
+            <?php if($userSession->isAuthenticated() == true): ?>   
+                <ul class="flexnavI col-6">
+            <?php else : ?>
+                <ul class="flexnavI col-4">
+            <?php endif; ?> 
+
                     <li><a href="index.php">ACCUEIL</a></li>
                     <li><a href="listesmoothies.php">SMOOTHIES</a> </li>
                     <li><a href="listerecettes.php">RECETTES</a> </li>
