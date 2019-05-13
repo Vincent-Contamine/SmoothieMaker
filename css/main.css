@@ -203,3 +203,43 @@ body {
 .chifre {
 	padding-left: 2%;
 }
+
+/* Media layout */
+
+@media screen and (max-width: 1626px) and (min-width: 1301px)
+{
+	.navbar {
+		-ms-flex: 0 0 41.666667% !important;
+		flex: 0 0 41.666667% !important;
+		max-width: 41.666667% !important;
+	}
+}
+@media screen and (max-width: 1300px) and (min-width: 1083px)
+{
+	.navbar {
+		-ms-flex: 0 0 50% !important;
+		flex: 0 0 50% !important;
+		max-width: 50% !important;
+	}
+}
+@media screen and (max-width: 1082px) and (min-width: 1026px)
+{
+	.navbar {
+		-ms-flex: 0 0 58.333333% !important;
+		flex: 0 0 58.333333% !important;
+		max-width: 58.333333% !important;
+	}
+}
+@media screen and (max-width: 1025px) 
+{
+	.flexnav {
+		align-items: start;
+		flex-direction: column;
+	}
+	.navbar {
+		-ms-flex: 0 0 58.333333% !important;
+		flex: 0 0 58.333333% !important;
+		max-width: 58.333333% !important;
+	}
+}
+
