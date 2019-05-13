@@ -152,10 +152,30 @@
     border-radius: 20px 20px;
     color:white;
 }
-@media screen and (max-width: 1024px) and (min-width: 769px){
+@media screen and (max-width: 1024px) and (min-width: 525px){
     .cxn .bck {
         background-size: 100%;
         background-position-y:-110px;
         height:230px;
+        }
+        .cxn input{
+        	width:90%;
+        }
+        .cxn .a{
+        	width:60%;
+        }
+       
+}
+@media screen and (max-width: 524px) {
+    .cxn .bck {
+        background-size: 100%;
+        background-position-y:-20px;
+        height:200px;
+        }
+        .cxn input{
+        	width:90%;
+        }
+        .cxn .a{
+        	width:60%;
         }
 }
