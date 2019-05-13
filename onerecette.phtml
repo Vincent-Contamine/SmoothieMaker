@@ -1,40 +1,48 @@
 
 	<div class="container one-recette">
 		<div class="row">
-		<div class="col-md-12">
-		<img src="photos/<?= $recette['Photo']?>"> 
-		</div> 
-		<div class="col-md-12">
-		<h1><?= $recette['Name']?></h1>
-		</div> 
+			<div class="col-12 imgjs">
+				<input type="hidden"   value="photos/<?= $recette['Photo']?>">
+			</div> 
 		</div>
-	</div>
-	<div>
-		<a href="#" class="fav milieu"><img src="icons/emprycolorheart.png" class="coeur"> AJOUTER CETTE RECETTE EN FAVORIS</a>
-	</div>
 	<div class="container">
-		<div class="col-md-6">
-			<h3>INGREDIENTS</h3>
-			<p>Pour 2 personnes:</p>
-			<ul>
-			  <?php for ($i=0; $i<count($recetteLine); $i++ ): ?>
-				<li><?= $recetteLine[$i]['Quantite'] ?> <?= $listeingredient[$recetteLine[$i]['Id_Ingredient']]['Name']?></li>
-				<?php endfor; ?>
-			</ul>
-		</div>
-		<div class="col-md-6">
+		<div class="row">
+			<div class="col-md-12 titrerecette">
+				<h1><?= strtoupper($recette['Name'])?></h1>
+			</div> 
+		</div> 
+	</div>
+		
+	</div>
+	<div class="intro pasdid">
+		<a href="#" class="fav milieu"><img src="icons/emptyheart.png" class="coeur"> AJOUTER CETTE RECETTE EN FAVORIS</a>
+	</div>
+	<div class="container marginenhaut">
+		<div class="row">
+
+			<fieldset class="col-md-4 contour">
+				<legend>INGREDIENTS</legend>
+				<p>Pour 2 personnes:</p>
+				<ul class="tiret">
+				<?php for ($i=0; $i<count($recetteLine); $i++ ): ?>
+					<li><?= $recetteLine[$i]['Quantite'] ?> <?= $listeingredient[$recetteLine[$i]['Id_Ingredient']]['Name']?></li>
+					<?php endfor; ?>
+				</ul>
+			</fieldset>
+
+		<div class="col-md-8 chifre">
 			<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal </p>
-			<h4>Etapes</h4>
-			<ul>
+			<h4>Etapes : </h4>
+			<ol>
 				<li>Bien nettoyer les ingrédients</li>
 				<li>Eplucher les pommes et les couper en morceaux</li>
 				<li>Si les raisin contiennent des pépins, pensez à les retirer</li>
 				<li>its layout. The point of using Lorem Ipsum is that it has a more-or-less normal </li>
 				<li>its layout. The point of using Lorem Ipsum </li>
 				<li>Servir frais</li>
-			</ul>
+			</ol>
 			<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages</p>
 		</div>
-		
+</div>
 	</div>
 

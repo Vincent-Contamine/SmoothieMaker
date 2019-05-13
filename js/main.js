@@ -114,7 +114,11 @@ $(document).ready(function(){
     {
         $('body').on('click', '.recette', afficherDetails);
     }
-
-
+    if (window.location.href.match('onerecette.php?') != null)
+    {
+        var back = $('.imgjs')[0];
+        back.setAttribute('style', 'background-image:url("'+$('.imgjs input')[0].value+'"); height:600px; background-position: center');
+    }
+    
 });
 
