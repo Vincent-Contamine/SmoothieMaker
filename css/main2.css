@@ -74,12 +74,26 @@
  .rue{
      padding: 10%;
      margin: -20px  -60px 20px 90px ;
+     text-align: center;
  }
  .trouver{
     border: 2px #62c97d solid;
     position: relative;
     z-index:1;
     margin: -20px  -60px 20px 90px ;
+ }
+ .trouver p{
+     font-family: "Nixie one";
+     margin-left: 2%;
+ }
+ .p{
+     font-family: "Nixie one";
+ }
+ .tt{
+     padding: 1%;
+ }
+ .bold{
+     font-weight: bold;
  }
  .horaires{
     text-align:center;
@@ -137,4 +151,11 @@
     background-color: #f26079;
     border-radius: 20px 20px;
     color:white;
+}
+@media screen and (max-width: 1024px) and (min-width: 769px){
+    .cxn .bck {
+        background-size: 100%;
+        background-position-y:-110px;
+        height:230px;
+        }
 }
