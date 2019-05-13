@@ -206,28 +206,44 @@ body {
 
 /* Media layout */
 
-@media screen and (max-width: 1626px) and (min-width: 1301px)
+@media screen and (max-width: 1626px) and (min-width: 1326px)
 {
 	.navbar {
 		-ms-flex: 0 0 41.666667% !important;
 		flex: 0 0 41.666667% !important;
 		max-width: 41.666667% !important;
 	}
+	.navbar2 {
+		-ms-flex: 0 0 58.333333% !important;
+		flex: 0 0 58.333333% !important;
+		max-width: 58.333333% !important;
+	}
+	
 }
-@media screen and (max-width: 1300px) and (min-width: 1083px)
+@media screen and (max-width: 1325px) and (min-width: 1151px)
 {
 	.navbar {
 		-ms-flex: 0 0 50% !important;
 		flex: 0 0 50% !important;
 		max-width: 50% !important;
 	}
+	.navbar2 {
+		-ms-flex: 0 0 66.666667% !important;
+		flex: 0 0 66.666667% !important;
+		max-width: 66.666667% !important;
+	}
 }
-@media screen and (max-width: 1082px) and (min-width: 1026px)
+@media screen and (max-width: 1150px) and (min-width: 1026px)
 {
 	.navbar {
 		-ms-flex: 0 0 58.333333% !important;
 		flex: 0 0 58.333333% !important;
 		max-width: 58.333333% !important;
+	}
+	.navbar2 {
+		-ms-flex: 0 0 75% !important;
+		flex: 0 0 75% !important;
+		max-width: 75% !important;
 	}
 }
 @media screen and (max-width: 1025px) 
