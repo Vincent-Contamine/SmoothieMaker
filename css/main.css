@@ -259,3 +259,34 @@ body {
 	}
 }
 
+/* Media One recette */
+
+@media screen and (max-width: 1200px) and (min-width: 997px)
+{
+	.contour legend {
+		width: 70% !important;
+		max-width: 70% !important;
+	}
+} 
+@media screen and (max-width: 996px) and (min-width: 769px)
+{
+	.contour legend {
+		width: 90% !important;
+		max-width: 90% !important;
+	}
+} 
+@media screen and (max-width: 466px) and (min-width: 411px)
+{
+	.titrerecette h1 {
+		font-size: 2rem;
+	}
+}
+@media screen and (max-width: 410px)
+{
+	.pasdid {
+		font-size: 0.7rem;
+	}
+	.titrerecette h1 {
+		font-size: 1.5rem;
+	}
+}
