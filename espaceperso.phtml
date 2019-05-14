@@ -1,11 +1,16 @@
 
 <?php if($userSession->isAuthenticated() == true): ?> <!-- si l'utilisateur est connecter on affiche ces recttes favoritent -->
-    <div class="container">
-        <div class="col-md-12">
-	        <img src="#">
-			<h1>MES RECETTES</h1>
+	<div class="container cxn">
+		<div class="row">
+        	<div class="col-md-12 bck">
+			</div>
 		</div>
-	</div>
+		<div class="row">
+        	<div class="col-md-12">
+				<h1>MES RECETTES</h1>		
+			</div>
+		</div>
+	</div>	
 		<?php if(empty($fav)): ?> <!-- si on n'a pas de recette on affiche cela -->
 			<p>Vous n'avez encore aucune recette dans vos favoris</p>
 		<?php else : ?> <!-- sinon on affiche les recettes -->
