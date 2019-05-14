@@ -99,8 +99,17 @@ if (array_key_exists("email",$_POST) && array_key_exists("password",$_POST))//on
             ); 
             if (array_key_exists('red', $_POST))
             {
-                header('Location: espaceperso.php');
-                exit();
+                if ($_POST['red'] == "espace")
+                {
+                    header('Location: espaceperso.php');
+                    exit();
+                }
+                else if ($_POST['red'] == 'recette')
+                {
+                    header('Location: listerecettes.php');
+                    exit();
+                }
+                
             }
             else
             {

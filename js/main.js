@@ -74,8 +74,7 @@ function addfav(e){
             }
             else
             {
-                sessionStorage.setItem("idRecette",idRecette);
-                window.location.href = "connexion.php?id="+idRecette;
+                window.location.href = "connexion.php?red=recette";
 
             }
         }
