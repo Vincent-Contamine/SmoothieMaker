@@ -74,7 +74,9 @@ function addfav(e){
             }
             else
             {
-                $('<div class="alert alert-danger" role="alert">Une erreur est survenue</div>').insertAfter("h1");
+                sessionStorage.setItem("idRecette",idRecette);
+                window.location.href = "connexion.php?id="+idRecette;
+
             }
         }
     });
