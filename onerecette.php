@@ -1,6 +1,7 @@
 <?php
 include 'bdd_connection.php';
 $id=$_GET['id'];
+
 $requete = $pdo->prepare("
     SELECT
     `Id`,

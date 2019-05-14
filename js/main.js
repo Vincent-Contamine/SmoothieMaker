@@ -84,6 +84,30 @@ function addfav(e){
         unfav(e);
     }
 }
+function addfavorite(e){
+e.preventDefault();
+var idRecette = e.target.id;
+var image = e.target.alt;
+// var location = window.location;
+
+$.ajax({
+    url: 'addfavorite.php',
+    type : "POST",
+    data: {idRecette: idRecette},
+    dataType: 'json', 
+    success: function(data){
+        if (data.result == true) 
+        {
+            window.location.href = location;
+        }
+        else
+        {
+            window.location.href = "connexion.php?red=recette";
+        }
+    }
+});
+}
+
 
 function afficherDetails(e){
     e.preventDefault();
@@ -118,6 +142,7 @@ $(document).ready(function(){
     {
         var back = $('.imgjs')[0];
         back.setAttribute('style', 'background-image:url("'+$('.imgjs input')[0].value+'"); height:600px; background-position: center; background-repaet: no-repeat');
+        $('body').on('click', '.fav', addfavorite);
     }
     
 });
