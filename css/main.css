@@ -203,7 +203,10 @@ body {
 .chifre {
 	padding-left: 2%;
 }
-
+.map {
+	width: 600px;
+	height: 450px;
+}
 /* Media layout */
 
 @media screen and (max-width: 1626px) and (min-width: 1326px)
@@ -292,7 +295,19 @@ body {
 }
 
 /* Media index */
+@media screen and (max-width: 1100px) and (min-width: 930px)
+{
+	.map {
+		width: 500px;
+	}
+}
 
+@media screen and (max-width: 929px) and (min-width: 801px)
+{
+	.map {
+		width: 400px;
+	}
+}
 
 @media screen and (max-width: 800px) and (min-width: 768px)
 {
@@ -301,6 +316,9 @@ body {
 	}
 	.flexcentre {
 		justify-content: center;
+	}
+	.map {
+		width: 400px;
 	}
 
 }
@@ -314,6 +332,9 @@ body {
 	}
 	.rue, .trouver {
 		margin: 0 !important;
+	}
+	.map {
+		width: 500px;
 	}
 
 }
