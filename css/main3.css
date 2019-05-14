@@ -104,3 +104,58 @@
     position: relative;
     z-index: 1;
 }
+
+@media (max-width: 1099px) { 
+
+    #produit .fullheart,
+    #produit .emptyheart{
+        position: relative;
+        top: -245px;
+        right: -260px;
+    }
+
+    #produit p{
+        color: rgb(255, 255, 255);
+        font-weight: 700;
+        position: relative;
+        top: -195px;
+        right: -30px;
+    }
+
+}
+@media (max-width: 991px) { 
+
+    #produit .fullheart,
+    #produit .emptyheart{
+        position: relative;
+        top: -190px;
+        right: -185px;
+    }
+
+    #produit p{
+        color: rgb(255, 255, 255);
+        font-weight: 700;
+        position: relative;
+        top: -150px;
+        right: -30px;
+    }
+
+}
+@media (max-width: 767px) { 
+
+    #produit .fullheart,
+    #produit .emptyheart{
+        position: relative;
+        top: -190px;
+        right: -185px;
+    }
+
+    #produit p{
+        color: rgb(255, 255, 255);
+        font-weight: 700;
+        position: relative;
+        top: -405px;
+        right: -450px;
+    }
+
+}

@@ -75,7 +75,6 @@ function addfav(e){
             else
             {
                 window.location.href = "connexion.php?red=recette";
-
             }
         }
     });
@@ -118,7 +117,7 @@ $(document).ready(function(){
     if (window.location.href.match('onerecette.php?') != null)
     {
         var back = $('.imgjs')[0];
-        back.setAttribute('style', 'background-image:url("'+$('.imgjs input')[0].value+'"); height:600px; background-position: center');
+        back.setAttribute('style', 'background-image:url("'+$('.imgjs input')[0].value+'"); height:600px; background-position: center; background-repaet: no-repeat');
     }
     
 });
