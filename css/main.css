@@ -248,7 +248,7 @@ body {
 }
 @media screen and (max-width: 1025px) 
 {
-	.flexnav {
+	.flexnav, .flexnavI {
 		align-items: start;
 		flex-direction: column;
 	}
@@ -289,4 +289,31 @@ body {
 	.titrerecette h1 {
 		font-size: 1.5rem;
 	}
+}
+
+/* Media index */
+
+
+@media screen and (max-width: 800px) and (min-width: 768px)
+{
+	.imgD {
+		display: none;
+	}
+	.flexcentre {
+		justify-content: center;
+	}
+
+}
+@media screen and (max-width: 767px) 
+{
+	.imgD {
+		display: none;
+	}
+	.flexcentre {
+		justify-content: center;
+	}
+	.rue, .trouver {
+		margin: 0 !important;
+	}
+
 }

@@ -28,9 +28,9 @@
         </div>  
         <?php $userSession = new UserSession(); ?>
         <?php if($userSession->isAuthenticated() == true): ?>   
-            <ul class="flexnavI col-6">
+            <ul class="flexnavI navbar2 col-6">
         <?php else : ?>
-            <ul class="flexnavI col-4">
+            <ul class="flexnavI navbar col-4">
         <?php endif; ?> 
             <li><a href="index.php">ACCUEIL</a></li>
             <li><a href="listesmoothies.php">SMOOTHIES</a> </li>
@@ -57,7 +57,7 @@
     </div>      
     </header>
     <div class="container">
-        <div class="row">
+        <div class="row flexcentre">
             <div classe="col-md-3" id="smoothie">     
             <h2>SmoothMaker</h2>
             <p>Votre producteur de smoothie artisanal à lyon</p>
