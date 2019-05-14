@@ -97,8 +97,17 @@ if (array_key_exists("email",$_POST) && array_key_exists("password",$_POST))//on
             $userSession->create(
                 $user['Id'],$user['FirstName'],$user['LastName'],$user['Email']
             ); 
-            header('Location: index.php'); // si le mdp correspond, on créer une nouvelle session et on redirige vers l'accueil
-		    exit();  
+            if (array_key_exists('red', $_POST))
+            {
+                header('Location: espaceperso.php');
+                exit();
+            }
+            else
+            {
+                header('Location: index.php'); // si le mdp correspond, on créer une nouvelle session et on redirige vers l'accueil
+		        exit();
+            }
+              
         }
         else // retourne une erreur si le mdp ne correspond pas
         {
