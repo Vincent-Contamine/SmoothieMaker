@@ -35,7 +35,7 @@ function unfav(e){
     e.preventDefault();
     $('.alert').hide();
     var idRecette = e.currentTarget.id;
-    var location = window.location;
+    var location = window.location.pathname;
     $.ajax({
         url: 'removefavorite.php',
         type : "POST",
@@ -44,11 +44,19 @@ function unfav(e){
         success: function(data){
             if (data.result == true) 
             {
-                window.location.href = location;
+                if(location == '/SmoothieMaker/onerecette.php'){
+                $('.intro').html('<a href="#" class="fav milieu" id='+idRecette+' data-favoris="no" ><img src="icons/emptyheart.png" > AJOUTER CETTE RECETTE EN FAVORIS</a>')
+                }
+                else if(location == '/SmoothieMaker/listerecettes.php'){
+                $('#'+idRecette).html('<img src="icons/emptyheart.png" alt="coeur vide" class="emptyheart"></a>')  
+                }
+                else if(location == '/SmoothieMaker/espaceperso.php'){
+                    window.location.href = location;
+                }
             }
             else
             {
-                $('<div class="alert alert-danger" role="alert">Une erreur est survenue</div>').insertAfter("h1");
+                $('<div class="alert alert-danger" role="alert">Une erreur est survenue</div>').insertAfter(".intro");
             }
         }
     });
@@ -70,7 +78,7 @@ function addfav(e){
         success: function(data){
             if (data.result == true) 
             {
-                window.location.href = location;
+                $('#'+idRecette).html('<img src="icons/fullheart.png" alt="coeur plein" class="fullheart"></a>');
             }
             else
             {
@@ -99,7 +107,7 @@ $.ajax({
     success: function(data){
         if (data.result == true) 
         {
-            window.location.href = location;
+            $('.intro').html('<a href="#" class="fav milieu" id='+idRecette+' data-favoris="yes"  ><img src="icons/emptyheart.png" > RETIRER LA RECETTE DES FAVORIS</a>');
         }
         else
         {
