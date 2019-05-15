@@ -14,9 +14,15 @@
 	</div>
 		
 	</div>
-	<div class="intro pasdid">
-		<a href="#" class="fav milieu" id=<?=$id?> ><img src="icons/emptyheart.png" class="coeur" > AJOUTER CETTE RECETTE EN FAVORIS</a>
-	</div>
+	<?php if($isFav == 'false'): ?>
+		<div class="intro pasdid">
+			<a href="#" class="fav milieu" id=<?=$id?> data-favoris="no" ><img src="icons/emptyheart.png" > AJOUTER CETTE RECETTE EN FAVORIS</a>
+		</div>
+	<?php elseif($isFav == 'true'): ?>
+		<div class="intro pasdid">
+			<a href="#" class="fav milieu" id=<?=$id?> data-favoris="yes"  ><img src="icons/emptyheart.png" > RETIRER LA RECETTE DES FAVORIS</a>
+		</div>
+	<?php endif; ?>
 	<div class="container marginenhaut">
 		<div class="row">
 

@@ -1,6 +1,7 @@
 <?php
 include 'bdd_connection.php';
 $id=$_GET['id'];
+$isFav = null;
 
 $requete = $pdo->prepare("
     SELECT
@@ -43,8 +44,36 @@ $requete = $pdo->prepare("
   $listeingredient[$recetteLine[$i]['Id_Ingredient']] = $ingredient;
   }
 
-
-
+  $userSession = new UserSession();
+  
+if($userSession->isAuthenticated() == true)
+{
+  $iduser = $userSession->getId();
+    $requete = $pdo->prepare("
+    SELECT
+    f.`Id_Recette`
+    FROM
+    `Favoris` f
+    WHERE
+    Id_User = ? 
+        "); 
+    $requete->execute([$iduser]);
+    $favoris = $requete->fetchAll();
+    foreach($favoris as $fav){
+        if ($id == $fav['Id_Recette']){
+            $isFav = 'true';
+            break;
+            
+        }
+        else
+        {
+            $isFav ='false';
+        } 
+    }
+}
+else {
+    $isFav ='false';
+}
 
 $template="onerecette";
 

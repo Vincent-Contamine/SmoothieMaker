@@ -87,9 +87,10 @@ function addfav(e){
 function addfavorite(e){
 e.preventDefault();
 var idRecette = e.target.id;
-var image = e.target.alt;
-// var location = window.location;
+var isInFav = e.currentTarget.dataset.favoris;
+var location = window.location;
 
+if(isInFav == 'no'){
 $.ajax({
     url: 'addfavorite.php',
     type : "POST",
@@ -106,6 +107,10 @@ $.ajax({
         }
     }
 });
+}else if(isInFav == 'yes')
+{
+    unfav(e);
+}
 }
 
 
@@ -141,7 +146,7 @@ $(document).ready(function(){
     if (window.location.href.match('onerecette.php?') != null)
     {
         var back = $('.imgjs')[0];
-        back.setAttribute('style', 'background-image:url("'+$('.imgjs input')[0].value+'"); height:600px; background-position: center; background-repaet: no-repeat');
+        back.setAttribute('style', 'background-image:url("'+$('.imgjs input')[0].value+'"); height:400px; background-position: center; background-repeat: no-repeat');
         $('body').on('click', '.fav', addfavorite);
     }
     
