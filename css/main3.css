@@ -70,7 +70,8 @@
     font-size: 1rem;
     font-weight: 700;
     position: relative;
-    bottom: -25px;
+    bottom: -35px;
+    text-transform: uppercase;
 }
 .nom{
     width: 160px;
@@ -91,7 +92,7 @@
     font-weight: 700;
     top: 30px!important; 
     right: 0px!important;
-    
+        
 }
 
 .nom2{
