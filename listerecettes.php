@@ -47,3 +47,35 @@ if($userSession->isAuthenticated() == true)
 
 
 include 'layout.phtml';
+
+
+/*
+SELECT
+  `Id`,
+  `Name`,
+  `Photo`,
+  COUNT(rl.Id_Recette) AS nbIngredient,
+  IF(
+    (
+      Id IN(
+      SELECT
+        Id_Recette
+      FROM
+        Favoris
+      WHERE
+        Id_User = 2
+    )
+    ),
+    "true",
+    "false"
+  ) AS inRecette
+FROM
+  `Recette` r
+INNER JOIN
+  RecetteLine rl ON r.Id = rl.Id_Recette
+WHERE
+  Confidentielle = 'false'
+GROUP BY
+  rl.Id_Recette
+
+  */
